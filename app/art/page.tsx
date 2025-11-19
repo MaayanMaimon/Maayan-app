@@ -18,7 +18,7 @@ type ArtItem = {
 // Data fetching function exactly as required in the assignment.
 // departmentId: which department to use (e.g. "11" for European Paintings)
 // count: how many art objects to return
-export async function getArtData(
+async function getArtData(
   departmentId: string,
   count: number
 ): Promise<ArtItem[]> {
