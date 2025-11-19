@@ -6,24 +6,21 @@ import Navbar from "@/lib/components/Navbar";
 import Footer from "@/lib/components/Footer";
 
 export const metadata: Metadata = {
-  title: "Digital Product Jam Starter Kit",
+  title: "Maayan's App",
   description:
-    "A starter kit for wiritng code in the Digital Product Jam course.",
+    "My Digital Product Jam projects: a game, an art gallery and a product design page.",
 };
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html>
+    <html lang="en">
       <head>
-        {/* Browser Favicon */}
         <link rel="icon" href="/icons/favicon.png" />
-        {/* Apple Icon */}
         <link
           rel="apple-touch-icon"
           sizes="180x180"
           href="/icons/icon-180.png"
         />
-        {/* Android Icon */}
         <link
           rel="icon"
           type="image/png"

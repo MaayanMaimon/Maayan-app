@@ -96,3 +96,8 @@ npm run start
 ```bash
 npm run info
 ```
+## Design Credits
+
+The visual design for the Ensemble page was created by Tal Langzam.  
+You can view the original Figma design here:  
+https://www.figma.com/design/Ro3Zguc3trGVRyZIcilbwn/Untitled?node-id=0-1&t=kql3rihqOI7totRF-1

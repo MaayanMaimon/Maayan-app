@@ -1,0 +1,131 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Calibri", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  background: linear-gradient(135deg, #eef2ff, #e0e7ff, #faf5ff);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
+  background: linear-gradient(90deg, #4f46e5, #9333ea);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+.status {
+  /* game status text: winner / next player / draw */
+  font-size: 1.5rem;      /* larger text */
+  margin-bottom: 1.2rem;
+  color: #4f46e5;
+  font-weight: 700;       /* a bit bolder */
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Glow effect when someone wins */
+.winner {
+  animation: winnerGlow 1.2s ease-out forwards;
+}
+
+@keyframes winnerGlow {
+  0% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 0 rgba(147, 51, 234, 0));
+  }
+  40% {
+    transform: scale(1.03);
+    filter: drop-shadow(0 0 18px rgba(147, 51, 234, 0.8));
+  }
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 8px rgba(79, 70, 229, 0.5));
+  }
+}
+
+/* 3x3 game board */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 90px);
+  gap: 10px;
+  margin-bottom: 1.5rem;
+}
+
+/* Single square base style */
+.square {
+  width: 90px;
+  height: 90px;
+  border: none;
+  background: #ffffff;
+  border-radius: 16px;
+  font-size: 2.4rem;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s ease, background 0.25s ease, box-shadow 0.25s ease,
+    color 0.25s ease;
+  animation: pop 0.25s ease;
+}
+
+/* Color for X (cooler purple/indigo) */
+.squareX {
+  color: #4f46e5;
+  text-shadow: 0 0 6px rgba(79, 70, 229, 0.4);
+}
+
+/* Color for O (warmer purple/violet) */
+.squareO {
+  color: #9333ea;
+  text-shadow: 0 0 6px rgba(147, 51, 234, 0.4);
+}
+
+.square:hover {
+  transform: scale(1.07);
+  background: #eef2ff;
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.25);
+}
+
+/* Small "pop" animation when squares appear */
+@keyframes pop {
+  0% {
+    transform: scale(0.7);
+    opacity: 0.4;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Restart button styling */
+.restartButton {
+  padding: 0.9rem 2rem;
+  font-size: 1.2rem;      /* larger text inside the button */
+  font-weight: 600;
+  min-width: 170px;
+  border-radius: 999px;
+  border: none;
+  background: linear-gradient(90deg, #a5b4fc, #c4b5fd); /* lighter purple */
+  color: #ffffff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.25);
+}
+
+.restartButton:hover {
+  transform: scale(1.06);
+  box-shadow: 0 6px 18px rgba(15, 23, 42, 0.35);
+}
+
+.restartButton:active {
+  transform: scale(0.95);
+}

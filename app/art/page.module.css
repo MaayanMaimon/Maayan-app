@@ -1,0 +1,85 @@
+.container {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: "Calibri", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  /* blue / light-blue background, different from the purple tic-tac-toe page */
+  background: linear-gradient(135deg, #e0f2fe, #dbeafe, #eff6ff);
+  min-height: 100vh;
+}
+
+.title {
+  font-size: 2.3rem;
+  margin-bottom: 1.5rem;
+  /* blue gradient for the title text */
+  background: linear-gradient(90deg, #0ea5e9, #2563eb);
+  -webkit-background-clip: text;
+  color: transparent;
+  font-weight: 700;
+}
+
+/* General error text for HTTP errors */
+.error {
+  color: #b91c1c;
+  background: #fee2e2;
+  border-radius: 8px;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+/* Card for a single artwork */
+.card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.18);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  border: 1px solid rgba(148, 163, 184, 0.3);
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(15, 23, 42, 0.25);
+}
+
+.image {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  background: #e5e7eb;
+}
+
+/* Artwork title */
+.cardTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0.85rem 1.1rem 0.3rem;
+  color: #0f172a; /* dark navy */
+}
+
+/* Artist name */
+.artist {
+  font-size: 0.98rem;
+  color: #1f2933;
+  margin: 0 1.1rem 0.55rem;
+}
+
+/* Meta info lines (date, medium, department, etc.) */
+.meta {
+  font-size: 0.9rem;
+  color: #475569;
+  margin: 0 1.1rem 0.3rem 1.1rem;
+  padding-bottom: 0.15rem;
+}
